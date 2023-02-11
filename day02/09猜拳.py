@@ -19,4 +19,3 @@ elif result == 0:
 else:
     # 输出结果
     print('电脑获胜')
-    
