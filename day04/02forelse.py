@@ -15,3 +15,4 @@ for i in range(0, 101):
     print(f'下载进度:{i}%')
 else:
     print('下载完成')
+    print('下载完成')
