@@ -27,9 +27,9 @@ print(list1)  # [1, 2, 3, 4, 5, 6]
 print(list2)  # [4, 5, 6]
 
 # 追加字符串序列时,会将字母依次拆分并放入列表中
-str1 = 'itcast'
+str1 = 'hello'
 list2.extend(str1)
-print(list2)  # [4, 5, 6, 'i', 't', 'c', 'a', 's', 't']
+print(list2)  # [4, 5, 6, 'h', 'e', 'l', 'l', 'o']
 
 # 如果括号内填写的数据,不是数据序列会怎样?
 # TypeError: 'int' object is not iterable  括号内必须是可迭代对象
