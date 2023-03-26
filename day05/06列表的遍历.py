@@ -44,6 +44,10 @@ list1 = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5]
 #     list1.pop(index_1)
 
 # 这种方式无法删除所有的5,因为在删除后索引发生了变换,for循环时会跳过某些数据
+# for i in list1:
+#     if i == 5:
+#         list1.pop(i)
+# print(list1)
 '''
 list1 = [1, 2, 3, 4]
 index    0  1  2  3
@@ -54,15 +58,13 @@ for循环遍历 0--列表中没有多余的元素
  0  1  2
 第三次循环取下标为2的元素 4
 '''
-# for i in list1:
-#     if i == 5:
-#         list1.pop(i)
-# print(list1)
+
 
 # i = 0
 # while i < len(list1):
 #     if list1[i] == 5:
 #         list1.pop(i)
+# 让索引不在自增
 #         continue
 #     i += 1
 # print(list1)
