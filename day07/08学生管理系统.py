@@ -129,11 +129,22 @@ def search_student():
 
 
 def show_all_student():
-    pass
+    """显示所有学生"""
+    # 1.判断学生列表是否为空
+    if len(students_list) == 0:
+        print('没有学生信息，请先添加学生信息！')
+    else:
+        # 2.如果不为空，显示所有学生信息
+        print('学生ID\t学生姓名\t学生年龄\t学生手机号')
+        for stu in students_list:
+            print('%s\t%s\t%s\t%s' % (stu['id'], stu['name'], stu['age'], stu['mobile']))
+        print('共有%d名学生' % len(students_list))
 
 
 def exit_system():
-    pass
+    """退出系统"""
+    print('退出系统成功！')
+    exit()
 
 
 #
