@@ -36,7 +36,7 @@ def func(n):
     return func(n-1) + n
 
 
-print(func(999))
+print(func(998))
 
 
 # Python中默认的最大调用深度,是1000 也就是在Python中函数最多嵌套1000层
