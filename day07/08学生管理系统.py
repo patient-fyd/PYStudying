@@ -74,7 +74,19 @@ def add_student():
 
 
 def del_student():
-    pass
+    """删除学生"""
+    # 1.获取用户输入的学生id
+    stu_id = input('请输入要删除的学生ID:')
+    # 2.判断学生id是否存在
+    if stu_id in [stu['id'] for stu in students_list]:
+        # 3.如果存在，删除学生信息
+        for stu in students_list:
+            if stu['id'] == stu_id:
+                students_list.remove(stu)
+                break
+        print('删除成功！')
+    else:
+        print('该学生ID不存在！')
 
 
 def modify_student():
