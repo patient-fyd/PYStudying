@@ -108,11 +108,24 @@ def modify_student():
                 stu['mobile'] = mobile
                 break
         print('修改成功！')
-    pass
+    else:
+        print('该学生ID不存在！')
 
 
 def search_student():
-    pass
+    """查询学生"""
+    # 1.获取用户输入的学生id
+    stu_id = input('请输入要查询的学生ID:')
+    # 2.判断学生id是否存在
+    if stu_id in [stu['id'] for stu in students_list]:
+        # 3.如果存在，查询学生信息
+        for stu in students_list:
+            if stu['id'] == stu_id:
+                print('学生ID\t学生姓名\t学生年龄\t学生手机号')
+                print('%s\t%s\t%s\t%s' % (stu['id'], stu['name'], stu['age'], stu['mobile']))
+                break
+    else:
+        print('该学生ID不存在！')
 
 
 def show_all_student():
