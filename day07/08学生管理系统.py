@@ -90,6 +90,24 @@ def del_student():
 
 
 def modify_student():
+    """修改学生"""
+    # 1.获取用户输入的学生id
+    stu_id = input('请输入要修改的学生ID:')
+    # 2.判断学生id是否存在
+    if stu_id in [stu['id'] for stu in students_list]:
+        # 3.如果存在，修改学生信息
+        for stu in students_list:
+            if stu['id'] == stu_id:
+                # 3.1 获取用户输入的学生信息
+                name = input('请输入学生姓名:')
+                age = input('请输入学生年龄（数字）:')
+                mobile = input('请输入学生手机号:')
+                # 3.2 修改学生信息
+                stu['name'] = name
+                stu['age'] = age
+                stu['mobile'] = mobile
+                break
+        print('修改成功！')
     pass
 
 
