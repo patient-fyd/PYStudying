@@ -7,8 +7,8 @@
 # 格式: open(file_name(文件路径), mode(读写模式)) 使用该函数会返回一个文件对象
 # 文件路径:可以写相对路径, 也可以写绝对路径,路径需要以字符串形式传入
 # 读写模式: r(只读)  w(写入)  a()追加
-file = open('python.txt', 'r')
-print(file) # <_io.TextIOWrapper name='python.txt' mode='r' encoding='UTF-8'>  在windows中默认读写格式是gbk
+file = open('python.txt', 'r', encoding='utf-8')
+print(file)  # <_io.TextIOWrapper name='python.txt' mode='r' encoding='UTF-8'>  在windows中默认读写格式是gbk
 print(type(file))  # <class '_io.TextIOWrapper'>
 # 将读取出来的内容进行打印
 print(file.read())
