@@ -51,4 +51,3 @@ def rename_file(flag, str1):
             new_name = name.replace(str1, '') + ext
         # 重命名文件
         os.rename(file, new_name)
-        
